@@ -3,7 +3,6 @@ import { dataIndexAttribute } from 'react-horizontal-scrolling-menu/dist/types/c
 import { View, Text, Button, StyleSheet, StatusBar, TextInput, TouchableOpacity } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import * as Animatable from 'react-native-animatable';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 
 const StudentYoutube = (props) => {
@@ -24,7 +23,7 @@ const StudentYoutube = (props) => {
   }
 
     return (
-        <Animatable.View animation="slideInRight" style={styles.container}>
+        <View style={styles.container}>
             <View style={styles.search}>
 
                 <View
@@ -93,7 +92,7 @@ const StudentYoutube = (props) => {
                     </TouchableOpacity>
                 </View>
             ))}
-        </Animatable.View>
+        </View>
     );
 };
 

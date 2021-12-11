@@ -14,18 +14,11 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import DateTimePicker from '@react-native-community/datetimepicker'
 import TimeSlider from '../PTM/TimeSlider'
 import SingleSelect from './SingleSelect'
-import StreamDropDown        from './StreamDropDown'
+import StreamDropDown from '../DropDown/StreamDropDown'
+import SubjectDropDown from '../DropDown/SubjectDropDown'
 
 const CreateLecture = () => {
-  DropDownPicker.setListMode('SCROLLVIEW')
-  const [open, setOpen] = useState(false)
-  const [value, setValue] = useState(null)
-  const [items, setItems] = useState([
-    {label: 'Faculty Name', value: 'Faculty Name'},
-    {label: 'Name', value: 'Name'},
-    {label: 'Names', value: 'Names'},
-  ])
-
+ 
   // --------Date-time Picker----------
   const [date, setDate] = useState(new Date(1598051730000))
   const [mode, setMode] = useState('date')
@@ -68,39 +61,8 @@ const CreateLecture = () => {
       style={{backgroundColor: '#FFFFFF'}}>
       <StreamDropDown />
       <View style={styles.container}>
-        <Text style={styles.labeltxt}>Subject</Text>
-        <View style={{marginTop: 20}}>
-          <DropDownPicker
-            open={open}
-            value={value}
-            items={items}
-            setOpen={setOpen}
-            setValue={setValue}
-            setItems={setItems}
-            placeholder='Select Subject'
-            multiple={true}
-            min={0}
-            max={5}
-            searchable={true}
-            // autoScroll={true}
-            // dropDownDirection="Bottom"
-            style={{
-              width: '90%',
-              alignSelf: 'center',
-              backgroundColor: '#E5E5E5',
-              borderColor: '#E5E5E5',
-            }}
-            textStyle={{
-              fontSize: 15,
-              fontFamily: 'Montserrat-Regular',
-            }}
-            dropDownContainerStyle={{
-              width: '90%',
-              alignSelf: 'center',
-              backgroundColor: '#E5E5E5',
-              borderColor: '#E5E5E5',
-            }}
-          />
+        <View>
+          <SubjectDropDown/>
           <Text style={styles.formtxt}>Title:</Text>
           <View style={styles.txtbox}>
             <TextInput

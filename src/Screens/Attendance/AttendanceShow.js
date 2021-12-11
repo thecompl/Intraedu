@@ -13,7 +13,7 @@ const AttendanceShow = (props) => {
         </View>
       </TouchableOpacity >
       <View style={styles.divline} />
-      <TouchableOpacity onPress={() => { props.navigation.navigate('HistoryAttendance') }}>
+      <TouchableOpacity onPress={() => { props.navigation.navigate('ReportAttendance') }}>
         <View style={styles.arrow}>
           <Text style={styles.headerText}>History</Text>
           <FontAwesome name="angle-right" size={30} color="#000000" />

@@ -20,13 +20,13 @@ const Event = (props) => {
         </View>
       </TouchableOpacity>
       <View style={styles.divline} />
-      <TouchableOpacity onPress={() => { props.navigation.navigate('ApplicationEvent') }}>
+      {/* <TouchableOpacity onPress={() => { props.navigation.navigate('ApplicationEvent') }}>
         <View style={styles.arrow}>
           <Text style={styles.headerText}>Application</Text>
           <FontAwesome name="angle-right" size={30} color="#000000" />
         </View>
       </TouchableOpacity>
-      <View style={styles.divline} />
+      <View style={styles.divline} /> */}
 
 
     </View>

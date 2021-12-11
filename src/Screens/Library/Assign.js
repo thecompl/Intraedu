@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, StatusBar, TextInput, TouchableOpacity } from 'react-native';
+import {Avatar,} from 'react-native-paper';
 import Feather from 'react-native-vector-icons/Feather';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import * as Animatable from 'react-native-animatable';
@@ -58,6 +59,7 @@ const Assign = (props) => {
             </View>
             {filterDatas.map((data, index) => (
                 <View>
+                    
                     <TouchableOpacity key={index} style={{
                         flexDirection: "row",
                         alignbooks: "center",
@@ -75,6 +77,11 @@ const Assign = (props) => {
                     }}
                         onPress={() => { props.navigation.navigate('BookDetail', { name: data.name, stream: data.stream }) }}
                     >
+                        <Avatar.Image
+                                source={{}}
+                                size={35}
+                                style={{backgroundColor:"#000000"}}
+                             />
                         <Text style={{
                             color: '#000000',
                             fontSize: 18,

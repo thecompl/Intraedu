@@ -83,6 +83,7 @@ import StudentYoutube from './src/Screens/StudentIntraclient/StudentYoutube/Stud
 import StudentEvent from './src/Screens/StudentIntraclient/StudentEvent/StudentEvent';
 import StudentNewEvent from './src/Screens/StudentIntraclient/StudentEvent/StudentNewEvent';
 import StudentEventDetail from './src/Screens/StudentIntraclient/StudentEvent/StudentEventDetail';
+import LecHistory from './src/Screens/Lectures/LecHistory';
 
 const HomeStack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -210,7 +211,7 @@ const HomeStackScreen = ({ navigation }) => {
         name="Collection"
         component={Collection}
         options={{
-          title: "Book's Collection",
+          title: "Collection",
 
           headerStyle: {
 
@@ -288,7 +289,7 @@ const HomeStackScreen = ({ navigation }) => {
         name="CreateEvent"
         component={CreateEvent}
         options={{
-          title: "Create",
+          title: "Create Event",
 
           headerStyle: {
 
@@ -505,6 +506,19 @@ const HomeStackScreen = ({ navigation }) => {
           headerTintColor: "white",
         }}
       />
+       <HomeStack.Screen
+        name="LecHistory"
+        component={LecHistory }
+        options={{
+          title: "History",
+
+          headerStyle: {
+
+            backgroundColor: "black"
+          },
+          headerTintColor: "white",
+        }}
+      />
       <HomeStack.Screen
         name="McqTest"
         component={McqTest}
@@ -600,7 +614,7 @@ const HomeStackScreen = ({ navigation }) => {
         name="ReportAttendance"
         component={ReportAttendance}
         options={{
-          title: "Report",
+          title: "History",
 
           headerStyle: {
 

@@ -5,25 +5,17 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import StandardSelectBtn from "./StandardSelectBtn";
-import StreamDropDown from "../Lectures/StreamDropDown";
+import StreamDropDown from '../DropDown/StreamDropDown'
 
 const AttendancePtm = (props) => {
 
   DropDownPicker.setListMode("SCROLLVIEW");
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState(null);
-  const [items, setItems] = useState([
-    { label: 'Faculty Name', value: 'Faculty Name' },
-    { label: 'Name', value: 'Name' },
-
-  ]);
-
   const [opens, setOpens] = useState(false);
   const [values, setValues] = useState(null);
   const [subjectitems, setSubjectItems] = useState([
-    { label: 'A', value: 'A' },
-    { label: 'B', value: 'B' },
-    { label: 'C', value: 'C' },
+    { label: 'Maths', value: 'A' },
+    { label: 'English', value: 'B' },
+    { label: 'Hindi', value: 'C' },
   ]);
 
 

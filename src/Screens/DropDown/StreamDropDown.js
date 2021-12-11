@@ -1,7 +1,7 @@
 // import component
 import React, {useState} from 'react'
-import {View, Text, StyleSheet} from 'react-native';
-import DropDownPicker from 'react-native-dropdown-picker';
+import {View, Text, StyleSheet} from 'react-native'
+import DropDownPicker from 'react-native-dropdown-picker'
 
 const StreamDropDown = () => {
   DropDownPicker.setListMode('SCROLLVIEW')
@@ -28,7 +28,7 @@ const StreamDropDown = () => {
         max={5}
         searchable={true}
         // autoScroll={true}
-        // dropDownDirection="Bottom"
+        // dropDownDirection="TOP"
         style={{
           width: '90%',
           alignSelf: 'center',

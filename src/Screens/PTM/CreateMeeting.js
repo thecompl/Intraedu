@@ -14,7 +14,7 @@ import DateTimePicker from '@react-native-community/datetimepicker'
 import TimeSlider from './TimeSlider'
 import {ScrollView} from 'react-native-gesture-handler'
 import SingleSelect from '../Lectures/SingleSelect'
-import StreamDropDown from '../Lectures/StreamDropDown'
+import StreamDropDown from '../DropDown/StreamDropDown'
 
 const CreateMeeting = () => {
   DropDownPicker.setListMode('SCROLLVIEW')

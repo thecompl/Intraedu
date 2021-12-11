@@ -1,54 +1,22 @@
 import React, { useState } from "react";
 import { View, Text, Button, StyleSheet, StatusBar, TextInput, TouchableOpacity } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import {AutoGrowingTextInput} from 'react-native-autogrow-textinput';
 
 const ApplyLeave = () => {
 
-  DropDownPicker.setListMode("SCROLLVIEW");
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState(null);
-  const [items, setItems] = useState([
-    { label: 'Faculty Name', value: 'Faculty Name' },
-    { label: 'Name', value: 'Name' },
-    { label: 'Names', value: 'Names' },
-  ]);
-
+ 
   return (
     <View style={styles.container}>
       <View style={{ marginTop: 20, }}>
         <Text style={styles.formtxt}>
           Reason:
         </Text>
-        <View style={styles.txtbox}>
-          <TextInput
-            placeholder="Reason For Leave..."
-            placeholderTextColor="#808080"
-            style={{
-              marginLeft: 0,
-              backgroundColor: "#FFFFFF",
-              width: "90%",
-              height: 40,
-              fontFamily: 'Montserrat-Regular',
-            }}
-          />
-        </View>
+        <AutoGrowingTextInput style={styles.txtboxDesc} placeholder={'Reason For Leave'} />
         <Text style={styles.formtxt}>
           Add Description:
         </Text>
-        <View style={styles.txtboxDesc}>
-          <TextInput
-            placeholder="ADD Description"
-            placeholderTextColor="#808080"
-            style={{
-              marginLeft: 2,
-              backgroundColor: "#FFFFFF",
-              width: "90%",
-              height: 70,
-              fontFamily: 'Montserrat-Regular',
-            }}
-          />
-        </View>
-
+        <AutoGrowingTextInput style={styles.txtboxDesc} placeholder={'Add Description'} />
         <Text style={styles.formtxt}>
           Days Of Leave:
         </Text>
@@ -126,6 +94,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginTop: 15,
     borderRadius: 5,
+    fontFamily: 'Montserrat-Regular',
   },
   formtxt: {
     marginTop: 10,

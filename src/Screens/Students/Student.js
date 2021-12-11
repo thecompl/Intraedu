@@ -14,7 +14,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import Feather from 'react-native-vector-icons/Feather'
 import Entypo from 'react-native-vector-icons/Entypo'
 import SearchInput, {createFilter} from 'react-native-search-filter'
-import {DataTable} from 'react-native-paper'
+import {DataTable, Avatar,} from 'react-native-paper'
 import axios from 'axios'
 
 const Student = props => {
@@ -91,7 +91,11 @@ const Student = props => {
           <DataTable>
             <DataTable.Row style={{borderBottomWidth: 0}}>
               <DataTable.Cell>
-                <FontAwesome5 name='user-alt' size={20} color='#000000' />
+                <Avatar.Image
+                  source={{}}
+                  size={50}
+                  style={{backgroundColor: '#000000'}}
+                />
               </DataTable.Cell>
               <DataTable.Cell style={{flex: 4.5}}>
                 <Text style={styles.label}>{user.label}</Text>
